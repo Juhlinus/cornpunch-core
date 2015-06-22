@@ -1,8 +1,13 @@
-<?php
+<?php 
+
+namespace CornpunchCore;
+
+use CornpunchCore\Database;
+use CornpunchCore\lib\FacepunchWrapper;
 
 class session{
     protected $database;
-    public function __construct( PDO $database ){
+    public function __construct( /* PDO */ $database ){
         $this->database = $database;
     }
 

@@ -1,16 +1,15 @@
 <?php
 
-try{
-    $database = new PDO("mysql:host=localhost;dbname=cornpunch", "root","");
-}
-catch(PDOException $e) {
-    die($e->getMessage());
-}
-
 class database{
     protected $database;
     public function __construct( PDO $database ){
-        $this->database = $database;
+        try{
+            $database = new PDO("mysql:host=localhost;dbname=cornpunch", "root","");
+            $this->database = $database;
+        }
+        catch(PDOException $e) {
+            die($e->getMessage());
+        }
     }
     public function addAuthenticationKey( $userid ){
         $haskey = $this->userAlreadyHasKey( $userid );

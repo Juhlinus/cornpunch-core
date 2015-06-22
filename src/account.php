@@ -1,11 +1,20 @@
 <?php
 
+namespace CornpunchCore;
+
+use CornpunchCore\lib\FacepunchWrapper;
+
 class account{
-    protected $database;
-    //File paths ( So I don't have to keep rewriting them.
+    /**
+     * Not being used
+     *
+     * protected $database;
+     * 
+     * File paths ( So I don't have to keep rewriting them.
+    **/
     protected $filepath;
-    public function __construct(PDO $database){
-        $this->database = $database;
+    public function __construct(/* PDO $database */){
+        //$this->database = $database;
         $this->filepath = array();
     }
 
