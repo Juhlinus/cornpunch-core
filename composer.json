@@ -1,4 +1,6 @@
 {
+    "name": "Juhlinus/CornpunchCore",
+    "description": "Cornpunch is a Facepunch powered movie hosting service, it was made for educational purposes. It is powered by my Facepunch wrapper.",
     "autoload": {
         "psr-4": {"CornpunchCore\\": "src/"}
     }
